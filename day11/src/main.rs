@@ -84,7 +84,7 @@ fn main() {
 
 fn part1(monkeys: &mut Vec<Monkey>) {
     for _ in 0..20 {
-        process_round(monkeys, 3, 1);
+        process_round(monkeys, 3, i64::MAX);
     }
     let mut inspected: Vec<usize> = monkeys.into_iter().map(|m| m.total_inspected).collect();
     inspected.sort();
